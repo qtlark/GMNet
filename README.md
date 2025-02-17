@@ -24,9 +24,9 @@
 
 <h2 id="code">1. Codes</h2>
 
-#### 1.1 How to test
+### 1.1 How to test
 
-#### 1.2 How to train
+### 1.2 How to train
 
 
 
