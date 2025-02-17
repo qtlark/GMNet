@@ -4,9 +4,9 @@
 
 <p align="center">
   <a href="https://openreview.net/pdf?id=GtHRhpgpzB" target="_blank">[Paper Link]</a>　
+  <a href="#dataset">[Datasets]</a>　
   <a href="#code">[Codes]</a>　
   <a href="#script">[Scripts]</a>　
-  <a href="#dataset">[Datasets]</a>　
   <a href="#concact">[Concact]</a>
 </p>
 
@@ -22,25 +22,9 @@
 
 <!-- <div align=center><img src="https://picx.zhimg.com/v2-3db8c51855060bd784b775e76e0100ea.png" style="width:70%" /></div> -->
 
-<h2 id="code">1. Codes</h2>
-
-### 1.1 How to test
-
-### 1.2 How to train
 
 
-
-<h2 id="script">2. Scripts</h2>
-
-### 2.1 Extract SDR&GM from Image
-
-### 2.2 PQ OETF for Visualization
-
-### 2.3 Matlab Evaluate Scripts
-
-
-
-<h2 id="dataset">3. Datasets</h2>
+<h2 id="dataset">1. Datasets</h2>
 
 |             |      Synthetic Dataset      |     Real-world Dataset      |
 | :---------: | :-------------------------: | :-------------------------: |
@@ -55,15 +39,33 @@
 
 
 
+<h2 id="code">3. Codes</h2>
+
+### 3.1 How to test
+
+### 3.2 How to train
 
 
-<h2 id="concact">4. Contact</h2>
+
+<h2 id="script">4. Scripts</h2>
+
+### 4.1 Extract SDR&GM from Image
+
+### 4.2 PQ OETF for Visualization
+
+### 4.3 Matlab Evaluate Scripts
+
+
+
+
+
+<h2 id="concact">5. Contact</h2>
 
 If you have any questions, please submit issue or contact yinuoliao@mail.ustc.edu.cn
 
 
 
-<h2 id="ack">5. Acknowledgment</h2>
+<h2 id="ack">6. Acknowledgment</h2>
 
 We appreciate the following github repositories for their valuable work:
 
