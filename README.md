@@ -7,8 +7,9 @@
   <a href="#dataset">[Datasets]</a>　
   <a href="#code">[Codes]</a>　
   <a href="#script">[Scripts]</a>　
-  <a href="#concact">[Concact]</a>
+  <a href="#concact">[Contact]</a>
 </p>
+
 
 ```tex
 @inproceedings{Liao_2025_ICLR,
