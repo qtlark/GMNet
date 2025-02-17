@@ -82,13 +82,12 @@ and more information can be found in the paper or the table below:
 
 <h2 id="script">4. Scripts</h2>
 
-### 4.1 Extract SDR&GM from Image
+We provide several practical scripts in `./scripts` and the details are as following:
 
-### 4.2 PQ OETF for Visualization
-
-### 4.3 Matlab Evaluate Scripts
-
-
+- `gm_hdr_decode.py`: The double-layer HDR image are store in one single file. This script extracts `image`, `gainmap` and `qmax` from double-layer file.
+- `pq_visualize.py`: This script convert the linear HDR image store in `nit` unit to HDR image by PQ-OETF for visualization. The PQ-EOTF are also provided.
+- `matlab_evaluate`: This folder stores matlab scripts for evaluation. Please first download and install [HDRVDP3](https://sourceforge.net/projects/hdrvdp/files/hdrvdp/3.0.6/) and [HDR_Toolbox](https://github.com/banterle/HDR_Toolbox) and place two folders into `./scripts/matlab_evaluate` folder. The modify the PD and GT path in `evaluation.m` and run it to get quantitative metrics.
+- `crop_training_patch.py`: This script crop the images to patches for training. (from [HDRTVNet](https://github.com/chxy95/HDRTVNet))
 
 
 
