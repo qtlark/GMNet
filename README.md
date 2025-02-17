@@ -39,13 +39,13 @@
 |             |      Synthetic Dataset      |     Real-world Dataset      |
 | :---------: | :-------------------------: | :-------------------------: |
 |   Source    |      HDR video frames       |        taken photos         |
-|   Volume    | ㅤㅤ900 trainset & 100 testsetㅤㅤ | ㅤㅤ900 trainset & 100 testsetㅤㅤ |
+|   Volume    | ㅤㅤㅤ900 trainset & 100 testsetㅤㅤㅤ | ㅤㅤㅤ900 trainset & 100 testsetㅤㅤㅤ |
 | SDR White Level |           100 nit           |           203 nit           |
 | HDR Peak Level |           800 nit           |          1015 nit           |
 | ㅤㅤQmax Rangeㅤㅤ |     [0, 3]  ([0, log8])     |    [0, 2.32]  ([0,log5])    |
 | Input SDR Image |                      3840×2160 8bit RGB                      |                      4096×3072 8bit RGB                      |
 | Output Gain Map |                     3840×2160 8bit Gray                      |                     2048×1536 8bit Gray                      |
-| ㅤㅤㅤDownload Linkㅤㅤㅤ | [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/)　| [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/) |
+| Download Link | [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/)　| [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/) |
 
 
 
