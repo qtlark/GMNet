@@ -26,6 +26,39 @@
 
 <h2 id="dataset">1. Datasets</h2>
 
+We provide **Synthetic Dataset** and **Real-world Dataset**, which are organized by following four parts:
+
+- `image`: The input SDR Images
+- `gainmap`: The Gourd-turth Gain Maps
+- `metadata`: The metadata for restore HDR form SDR-GM pair (Only Qmax here)
+- `thumbnail`: The down-sampled SDR Images in resolution `256×256` (Bicubic interpolation)
+
+The data structure in dataset will be like:
+
+```
+synthetic_dataset
+├── train
+|   ├── image
+|   |   └── *.png
+|   ├── gainmap
+|   |   └── *.png
+|   ├── metadata
+|   |   └── *.npy
+|   └── thumbnail
+|       └── *.png
+└── test
+    ├── image
+    |   └── *.png
+    ├── gainmap
+    |   └── *.png
+    ├── metadata
+    |   └── *.npy
+    └── thumbnail
+        └── *.png
+```
+
+and more information can be found in the paper or the table below:
+
 |             |      Synthetic Dataset      |     Real-world Dataset      |
 | :---------: | :-------------------------: | :-------------------------: |
 |   Source    |      HDR video frames       |        taken photos         |
@@ -34,7 +67,7 @@
 | HDR Peak Level |           800 nit           |          1015 nit           |
 | ㅤㅤQmax Rangeㅤㅤ |     [0, 3]  ([0, log8])     |    [0, 2.32]  ([0,log5])    |
 | Input SDR Image |                      3840×2160 8bit RGB                      |                      4096×3072 8bit RGB                      |
-| Output Gain Map |                     3840×2160 8bit Gray                      |                     2048×1536 8bit Gray                      |
+| Gourd-turth Gain Map |                     3840×2160 8bit Gray                      |                     2048×1536 8bit Gray                      |
 | ㅤㅤDownload Linkㅤㅤ | [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/)　| [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/) |
 
 
