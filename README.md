@@ -42,7 +42,7 @@
 |   Volume    | 900 trainset & 100 testset  | 900 trainset & 100 testset  |
 | White Level |           100 nit           |           203 nit           |
 | Peak Level  |           800 nit           |          1015 nit           |
-| Qmax Range  |     [0, 3] ([0, log8])      |          [0, log5]          |
+| Qmax Range  |     [0, 3]  ([0, log8])     |    [0, 2.32]  ([0,log5])    |
 | Resolution  |          3840×2160          |          4096×3072          |
 |    Depth    | 8bit RGB SDR & 8bit Gray GM | 8bit RGB SDR & 8bit Gray GM |
 
