@@ -22,32 +22,39 @@
 
 <!-- <div align=center><img src="https://picx.zhimg.com/v2-3db8c51855060bd784b775e76e0100ea.png" style="width:70%" /></div> -->
 
-
-<h2 id="code">Codes</h2>
-
-
-
-
-
-<h2 id="script">Scripts</h2>
+<h2 id="code">1. Codes</h2>
 
 
 
 
 
-<h2 id="dataset">Datasets</h2>
-
-test3
+<h2 id="script">2. Scripts</h2>
 
 
 
-<h2 id="concact">Contact</h2>
+
+
+<h2 id="dataset">3. Datasets</h2>
+
+|             |      Synthetic Dataset      |     Real-world Dataset      |
+| :---------: | :-------------------------: | :-------------------------: |
+|   Source    |      HDR video frames       |        taken photos         |
+|   Volume    | 900 trainset & 100 testset  | 900 trainset & 100 testset  |
+| White Level |           100 nit           |           203 nit           |
+| Peak Level  |           800 nit           |          1015 nit           |
+| Qmax Range  |     [0, 3] ([0, log8])      |          [0, log5]          |
+| Resolution  |      3840$\times$2160       |      4096$\times$3072       |
+|    Depth    | 8bit RGB SDR & 8bit Gray GM | 8bit RGB SDR & 8bit Gray GM |
+
+
+
+<h2 id="concact">4. Contact</h2>
 
 If you have any questions, please submit issue or contact yinuoliao@mail.ustc.edu.cn
 
 
 
-<h2 id="ack">Acknowledgment</h2>
+<h2 id="ack">5. Acknowledgment</h2>
 
 We appreciate the following github repositories for their valuable work:
 
