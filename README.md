@@ -44,7 +44,7 @@
 | Peak Level  |           800 nit           |          1015 nit           |
 | ㅤㅤQmax Rangeㅤㅤ |     [0, 3]  ([0, log8])     |    [0, 2.32]  ([0,log5])    |
 | Resolution  |          3840×2160          |          4096×3072          |
-|    Depth    | 　ㅤㅤㅤ8bit RGB SDR & 8bit Gray GMㅤㅤㅤ　 | ㅤㅤㅤ8bit RGB SDR & 8bit Gray GMㅤㅤㅤ |
+|    Depth    | 　ㅤㅤ8bit RGB SDR & 8bit Gray GMㅤㅤ　 | ㅤㅤ8bit RGB SDR & 8bit Gray GMㅤㅤ |
 
 
 
