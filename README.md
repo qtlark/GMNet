@@ -14,7 +14,7 @@
 ```tex
 @inproceedings{Liao_2025_ICLR,
     title     = {Learning Gain Map for Inverse Tone Mapping},
-  author    = {Yinuo Liao and Yuanshen Guan and Ruikang Xu and Jiacheng Li and Shida Sun and Zhiwei Xiong},
+author    = {Yinuo Liao and Yuanshen Guan and Ruikang Xu and Jiacheng Li and Shida Sun and Zhiwei Xiong},
     booktitle = {The Thirteenth International Conference on Learning Representations},
     month     = {April},
     year      = {2025}
