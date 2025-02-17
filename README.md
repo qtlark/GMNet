@@ -40,11 +40,14 @@
 | :---------: | :-------------------------: | :-------------------------: |
 |   Source    |      HDR video frames       |        taken photos         |
 |   Volume    | 900 trainset & 100 testset  | 900 trainset & 100 testset  |
-| White Level |           100 nit           |           203 nit           |
-| Peak Level  |           800 nit           |          1015 nit           |
+| SDR White Level |           100 nit           |           203 nit           |
+| HDR Peak Level |           800 nit           |          1015 nit           |
 | ㅤㅤQmax Rangeㅤㅤ |     [0, 3]  ([0, log8])     |    [0, 2.32]  ([0,log5])    |
-| Resolution  |          3840×2160          |          4096×3072          |
-|    Depth    | ㅤㅤ8bit RGB SDR & 8bit Gray GMㅤㅤ | ㅤㅤ8bit RGB SDR & 8bit Gray GMㅤㅤ |
+| Input SDR Image |          ㅤㅤ3840×2160 8bit RGBㅤㅤ          |          ㅤㅤ4096×3072 8bit RGBㅤㅤ          |
+| Output Gain Map | ㅤㅤ3840×2160 8bit Grayㅤㅤ | ㅤㅤ2048×1536 8bit Grayㅤㅤ |
+| Download Link | <a href="https://openreview.net/pdf?id=GtHRhpgpzB" target="_blank">[Paper Link]</a>　 | [知乎](https://www.zhihu.com/) |
+
+
 
 
 
