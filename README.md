@@ -72,9 +72,9 @@ and more information can be found in the paper or the table below:
 
 
 
-<h2 id="code">3. Codes</h2>
+<h2 id="code">2. Codes</h2>
 
-### 3.1 How to test
+### 2.1 How to test
 
 Please download our dataset first, then modify the `dataroot` in `./codes/options/test/gmnet_test.yml`  to the path you store dataset, and you can modify `pretrain_model_G` to choose the pretrained model. When the configuration in `gmnet_test.yml` is ready, you can run the conmand:
 
@@ -85,7 +85,7 @@ python test.py -opt options/test/gmnet_test.yml
 
 The test results will be saved to `./results/test_name`, and you can evaluate the quantitative metrics by `matlab_evaluation` in <a href="#script">[Scripts]</a>.
 
-### 3.2 How to train
+### 2.2 How to train
 
 To facilitate the training process, please modify the data path in `crop_training_patch.py` in <a href="#script">[Scripts]</a> and run it to crop the images to patches:
 
@@ -105,7 +105,7 @@ The checkpoints and training states can be found  `./experiments/train_name`.
 
 
 
-<h2 id="script">4. Scripts</h2>
+<h2 id="script">3. Scripts</h2>
 
 We provide several practical scripts in `./scripts` and the details are as following:
 
@@ -116,13 +116,13 @@ We provide several practical scripts in `./scripts` and the details are as follo
 
 
 
-<h2 id="concact">5. Contact</h2>
+<h2 id="concact">4. Contact</h2>
 
 If you have any questions, please submit issue or contact yinuoliao@mail.ustc.edu.cn
 
 
 
-<h2 id="ack">6. Acknowledgment</h2>
+<h2 id="ack">5. Acknowledgment</h2>
 
 We appreciate the following github repositories for their valuable work:
 
