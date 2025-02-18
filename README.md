@@ -9,8 +9,6 @@
   <a href="#script">[Scripts]</a>　
   <a href="#concact">[Contact]</a>
 </p>
-
-
 ```tex
 @inproceedings{Liao_2025_ICLR,
     title     = {Learning Gain Map for Inverse Tone Mapping},
@@ -38,7 +36,7 @@ The data structure in dataset will be like:
 
 ```
 synthetic_dataset
-├── train
+├── train_set
 |   ├── image
 |   |   └── *.png
 |   ├── gainmap
@@ -47,7 +45,7 @@ synthetic_dataset
 |   |   └── *.npy
 |   └── thumbnail
 |       └── *.png
-└── test
+└── test_set
     ├── image
     |   └── *.png
     ├── gainmap
@@ -77,7 +75,32 @@ and more information can be found in the paper or the table below:
 
 ### 3.1 How to test
 
+Please download our dataset first, then modify the `dataroot` in `./codes/options/test/gmnet_test.yml`  to the path you store dataset, and you can modify `pretrain_model_G` to choose the pretrained model. When the configuration in `gmnet_test.yml` is ready, you can run the conmand:
+
+```
+cd codes
+python test.py -opt options/test/gmnet_test.yml
+```
+
+The test results will be saved to `./results/test_name`, and you can evaluate the quantitative metrics by `matlab_evaluation` in <a href="#script">[Scripts]</a>.
+
 ### 3.2 How to train
+
+To facilitate the training process, please modify the data path in `crop_training_patch.py` in <a href="#script">[Scripts]</a> and run it to crop the images to patches:
+
+```
+cd scripts
+python crop_training_patch.py
+```
+
+It will generate pathes of `image` to `image_sub` folder, and the pathes of `gainmap` to `gainmap_sub` folder. After that, please modify the `dataroot` in `./codes/options/train/gmnet_train.yml`  to the sub-folder, then tun:
+
+```
+cd codes
+python train.py -opt options/train/gmnet_train.yml
+```
+
+The checkpoints and training states can be found  `./experiments/train_name`.
 
 
 
@@ -85,10 +108,10 @@ and more information can be found in the paper or the table below:
 
 We provide several practical scripts in `./scripts` and the details are as following:
 
+- `matlab_evaluation`: This folder stores matlab scripts for evaluation. Please first download and install [HDRVDP3](https://sourceforge.net/projects/hdrvdp/files/hdrvdp/3.0.6/) and [HDR_Toolbox](https://github.com/banterle/HDR_Toolbox) and place two folders into `./scripts/matlab_evaluate` folder. The modify the PD and GT path in `evaluation.m` and run it to get quantitative metrics.
+- `crop_training_patch.py`: This script crop the images to patches for training. (from [HDRTVNet](https://github.com/chxy95/HDRTVNet))
 - `gm_hdr_decode.py`: The double-layer HDR image are store in one single file. This script extracts `image`, `gainmap` and `qmax` from double-layer file.
 - `pq_visualize.py`: This script convert the linear HDR image in `nit` unit to HDR image by PQ-OETF for visualization. The PQ-EOTF are also provided.
-- `matlab_evaluate`: This folder stores matlab scripts for evaluation. Please first download and install [HDRVDP3](https://sourceforge.net/projects/hdrvdp/files/hdrvdp/3.0.6/) and [HDR_Toolbox](https://github.com/banterle/HDR_Toolbox) and place two folders into `./scripts/matlab_evaluate` folder. The modify the PD and GT path in `evaluation.m` and run it to get quantitative metrics.
-- `crop_training_patch.py`: This script crop the images to patches for training. (from [HDRTVNet](https://github.com/chxy95/HDRTVNet))
 
 
 
