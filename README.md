@@ -37,7 +37,7 @@ The data structure in dataset will be like:
 
 ```
 synthetic_dataset
-├── train_set
+├── train
 |   ├── image
 |   |   └── *.png
 |   ├── gainmap
@@ -46,7 +46,7 @@ synthetic_dataset
 |   |   └── *.npy
 |   └── thumbnail
 |       └── *.png
-└── test_set
+└── test
     ├── image
     |   └── *.png
     ├── gainmap
