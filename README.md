@@ -80,7 +80,7 @@ Please download our dataset first, then modify the `dataroot` in `./codes/option
 
 ```
 cd codes
-python test.py -opt options/test/gmnet_test.yml
+python test.py -opt options/config/test_real.yml
 ```
 
 The test results will be saved to `./results/test_name`, and you can evaluate the quantitative metrics by `matlab_evaluation` in <a href="#script">[Scripts]</a>.
@@ -98,7 +98,7 @@ It will generate pathes of `image` to `image_sub` folder, and the pathes of `gai
 
 ```
 cd codes
-python train.py -opt options/train/gmnet_train.yml
+python train.py -opt options/config/train_real.yml
 ```
 
 The checkpoints and training states can be found  `./experiments/train_name`.
