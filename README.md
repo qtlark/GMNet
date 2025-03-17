@@ -89,7 +89,7 @@ To facilitate the training process, please modify the data path in `crop_trainin
 
 ```
 cd scripts
-python crop_training_patch.py --input_folder ../Synthetic_dataset/train/image --save_folder ../Synthetic_dataset/train/image_sp --n_thread 20 --crop_sz 480 --step 480
+python crop_training_patch.py --input_folder ../Synthetic_dataset/train/image   --save_folder ../Synthetic_dataset/train/image_sp   --n_thread 20 --crop_sz 480 --step 480
 python crop_training_patch.py --input_folder ../Synthetic_dataset/train/gainmap --save_folder ../Synthetic_dataset/train/gainmap_sp --n_thread 20 --crop_sz 480 --step 480
 ```
 
