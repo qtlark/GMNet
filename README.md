@@ -20,8 +20,6 @@
 }
 ```
 
-<!-- <div align=center><img src="https://picx.zhimg.com/v2-3db8c51855060bd784b775e76e0100ea.png" style="width:70%" /></div> -->
-
 
 
 <h2 id="dataset">1. Datasets</h2>
@@ -29,7 +27,7 @@
 We provide **Synthetic Dataset** and **Real-world Dataset**, which are organized by following four parts:
 
 - `image`: The input SDR Images
-- `gainmap`: The Gourd-turth Gain Maps
+- `gainmap`: The Gourd-Turth Gain Maps
 - `metadata`: The metadata for restore HDR form SDR-GM pair (Only Qmax here)
 - `thumbnail`: The down-sampled SDR Images in resolution `256×256` (Bicubic interpolation)
 
@@ -37,7 +35,7 @@ The data structure in dataset will be like:
 
 ```
 synthetic_dataset
-├── train_set
+├── train
 |   ├── image
 |   |   └── *.png
 |   ├── gainmap
@@ -46,7 +44,7 @@ synthetic_dataset
 |   |   └── *.npy
 |   └── thumbnail
 |       └── *.png
-└── test_set
+└── test
     ├── image
     |   └── *.png
     ├── gainmap
@@ -68,7 +66,7 @@ and more information can be found in the paper or the table below:
 | ㅤㅤQmax Rangeㅤㅤ |     [0, 3]  ([0, log8])     |    [0, 2.32]  ([0,log5])    |
 | Input SDR Image |                      3840×2160 8bit RGB                      |                      4096×3072 8bit RGB                      |
 | Gourd-turth Gain Map |                     3840×2160 8bit Gray                      |                     2048×1536 8bit Gray                      |
-| ㅤㅤDownload Linkㅤㅤ | [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/)　| [[BaiduNetDisk]](https://www.zhihu.com/) [[GoogleDrive]](https://www.zhihu.com/) |
+| ㅤㅤDownload Linkㅤㅤ | [[BaiduNetDisk]](https://pan.baidu.com/s/1zIM6qP7KN1nQaQ0dFUg1Sg?pwd=1958) [[OneDrive]](https://www.zhihu.com/)　| [[BaiduNetDisk]](https://pan.baidu.com/s/1zIM6qP7KN1nQaQ0dFUg1Sg?pwd=1958) [[OneDrive]](https://www.zhihu.com/) |
 
 
 
@@ -80,23 +78,26 @@ Please download our dataset first, then modify the `dataroot` in `./codes/option
 
 ```
 cd codes
-python test.py -opt options/test/gmnet_test.yml
+python test.py -opt options/config/test_syn.yml
 ```
 
 The test results will be saved to `./results/test_name`.
 
-To facilitate the training process, please modify the data path in `crop_training_patch.py` in <a href="#script">[Scripts]</a> and run it to crop the images to patches:
+### 2.2 How to train
+
+To facilitate the training process, please modify the data path in `crop_training_patch.py` in <a href="#script">[Scripts]</a> and run it to crop the image and gainmap to patch:
 
 ```
 cd scripts
-python crop_training_patch.py
+python crop_training_patch.py --input_folder ../Synthetic_dataset/train/image --save_folder ../Synthetic_dataset/train/image_sp --n_thread 20 --crop_sz 480 --step 480
+python crop_training_patch.py --input_folder ../Synthetic_dataset/train/gainmap --save_folder ../Synthetic_dataset/train/gainmap_sp --n_thread 20 --crop_sz 480 --step 480
 ```
 
-It will generate pathes of `image` to `image_sub` folder, and the pathes of `gainmap` to `gainmap_sub` folder. After that, please modify the `dataroot` in `./codes/options/train/gmnet_train.yml`  to the sub-folder, then tun:
+It will generate pathes of `image` to `image_sp` folder, and the pathes of `gainmap` to `gainmap_sp` folder. After that, please modify the `dataroot` in `./codes/options/config/train_syn.yml`  to the sub-folder, then tun:
 
 ```
 cd codes
-python train.py -opt options/train/gmnet_train.yml
+python train.py -opt options/config/train_syn.yml
 ```
 
 The checkpoints and training states can be found  `./experiments/train_name`.
@@ -107,9 +108,10 @@ The checkpoints and training states can be found  `./experiments/train_name`.
 
 We provide several practical scripts in `./scripts` and the details are as following:
 
-- `crop_training_patch.py`: This script crop the images to patches for training. (from [HDRTVNet](https://github.com/chxy95/HDRTVNet))
-- `gm_hdr_decode.py`: The double-layer HDR image are store in one single file. This script extracts `image`, `gainmap` and `qmax` from double-layer file.
-- `pq_visualize.py`: This script convert the linear HDR image in `nit` unit to HDR image by PQ-OETF for visualization. The PQ-EOTF are also provided.
+- `crop_training_patch.py`: This script crops the images to patches for training. (from [HDRTVNet](https://github.com/chxy95/HDRTVNet))
+- `extract_double_layer_hdr.py`: The double-layer HDR image are store in one single file. This script extracts `sdr`, `gainmap` and `qmax` from double-layer file.
+- `render_sdr_gm_to_linear_hdr.py`: This script restores linear HDR from `sdr`, `gainmap` and `qmax`.
+- `pq_visualize.py`: This script converts the linear HDR to HDR image by PQ-OETF for visualization. 
 
 
 

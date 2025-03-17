@@ -1,0 +1,71 @@
+#### general settings
+name: none
+model: base
+use_tb_logger: false
+scale: 1
+peak: 8.0
+gpu_ids: [1]
+
+#### datasets
+datasets:
+  train:
+    name: GM_ITM
+    mode: LQGT_base
+    dataroot_LQ: /data2/yunqiao/Synthetic_dataset/train/image_sp
+    dataroot_GT: /data2/yunqiao/Synthetic_dataset/train/gainmap_sp
+    dataroot_QM: /data2/yunqiao/Synthetic_dataset/train/metadata
+    dataroot_MN: /data2/yunqiao/Synthetic_dataset/train/thumbnail
+    n_workers: 16
+    batch_size: 32
+    GT_size: 160
+    use_shuffle: true
+    use_flip: false
+    use_rot: false
+  val:
+    name: GM_ITM
+    mode: LQGT_base
+    dataroot_LQ: /data2/yunqiao/Synthetic_dataset/test/image
+    dataroot_GT: /data2/yunqiao/Synthetic_dataset/test/gainmap
+    dataroot_QM: /data2/yunqiao/Synthetic_dataset/test/metadata
+    dataroot_MN: /data2/yunqiao/Synthetic_dataset/test/thumbnail
+    save_img: false
+
+#### network structures
+network_G:
+  which_model_G: GMNet
+  in_nc: 3
+  out_nc: 1
+  nf: 64
+  nb: 16
+  act_type: relu
+
+#### path
+path:
+  root: ./
+  # pretrain_model_G: ../checkpoints/58500_G.pth
+  strict_load: false
+  # resume_state: ../experiments/gmnet_final/training_state/32500.state
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 3e-5
+  lr_scheme: MultiStepLR # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000 # 600000 
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [200000, 400000, 600000, 800000]
+  lr_gamma: 0.5
+
+  pixel_criterion: l1
+  pixel_weight: 1.0
+
+  manual_seed: 10
+  val_freq: !!float 100e2
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 100e2
