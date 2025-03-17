@@ -55,7 +55,7 @@ synthetic_dataset
         └── *.png
 ```
 
-and more information can be found in the paper or the table below:
+and more information can be found in the paper and the table below:
 
 |             |      Synthetic Dataset      |     Real-world Dataset      |
 | :---------: | :-------------------------: | :-------------------------: |
