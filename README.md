@@ -66,7 +66,7 @@ and more information can be found in the paper or the table below:
 | ㅤㅤQmax Rangeㅤㅤ |     [0, 3]  ([0, log8])     |    [0, 2.32]  ([0,log5])    |
 | Input SDR Image |                      3840×2160 8bit RGB                      |                      4096×3072 8bit RGB                      |
 | Gourd-turth Gain Map |                     3840×2160 8bit Gray                      |                     2048×1536 8bit Gray                      |
-| ㅤㅤDownload Linkㅤㅤ | [[BaiduNetDisk]](https://pan.baidu.com/s/1zIM6qP7KN1nQaQ0dFUg1Sg?pwd=1958) [[OneDrive]](https://www.zhihu.com/)　| [[BaiduNetDisk]](https://pan.baidu.com/s/1zIM6qP7KN1nQaQ0dFUg1Sg?pwd=1958) [[OneDrive]](https://www.zhihu.com/) |
+| ㅤㅤDownload Linkㅤㅤ | [[BaiduNetDisk]](https://pan.baidu.com/s/1I3gzQN-MqP62FMnlyhzdqA?pwd=1958) [[OneDrive]](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/ynliao_stu_xidian_edu_cn/Etsw2xb9LJBIgDsJ2lbh9CsBofhFihU0q7HbyM3Hm6P2_Q?e=hRccCg)　| [[BaiduNetDisk]](https://pan.baidu.com/s/1I3gzQN-MqP62FMnlyhzdqA?pwd=1958) [[OneDrive]](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/ynliao_stu_xidian_edu_cn/Etsw2xb9LJBIgDsJ2lbh9CsBofhFihU0q7HbyM3Hm6P2_Q?e=hRccCg) |
 
 
 
