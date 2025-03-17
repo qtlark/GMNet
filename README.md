@@ -74,7 +74,7 @@ and more information can be found in the paper or the table below:
 
 ### 2.1 How to test
 
-Please download our dataset first, then modify the `dataroot` in `./codes/options/test/gmnet_test.yml`  to the path you store dataset, and you can modify `pretrain_model_G` to choose the pretrained model. When the configuration in `gmnet_test.yml` is ready, you can run the conmand:
+Please download our dataset first, then modify the `dataroot` in `./codes/options/config/test_syn.yml`  to the path you store dataset, and you can modify `pretrain_model_G` to choose the pretrained model. When the configuration in `test_syn.yml` is ready, you can run the conmand:
 
 ```
 cd codes
