@@ -109,7 +109,7 @@ The checkpoints and training states can be found  `./experiments/train_name`.
 We provide several practical scripts in `./scripts` and the details are as following:
 
 - `crop_training_patch.py`: This script crops the images to patches for training. (from [HDRTVNet](https://github.com/chxy95/HDRTVNet))
-- `extract_double_layer_hdr.py`: The double-layer HDR image are store in one single file. This script extracts sdr, gainmap and qmax from double-layer file.
+- `extract_double_layer_hdr.py`: This script extracts sdr, gainmap and qmax from double-layer HDR file.
 - `render_sdr_gm_to_linear_hdr.py`: This script restores linear HDR from sdr, gainmap and qmax.
 - `pq_visualize.py`: This script converts the linear HDR to HDR image by PQ-OETF for visualization. 
 
