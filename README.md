@@ -111,7 +111,7 @@ We provide several practical scripts in `./scripts` and the details are as follo
 - `crop_training_patch.py`: This script crops the images to patches for training. (from [HDRTVNet](https://github.com/chxy95/HDRTVNet))
 - `extract_double_layer_hdr.py`: This script extracts sdr, gainmap and qmax from double-layer HDR file.
 - `render_sdr_gm_to_linear_hdr.py`: This script restores linear HDR from sdr, gainmap and qmax.
-- `pq_visualize.py`: This script converts the linear HDR to HDR image by PQ-OETF for visualization. 
+- `pq_visualize.py`: This script converts the linear HDR to PQ-OETF encoded HDR image for visualization. 
 
 
 
